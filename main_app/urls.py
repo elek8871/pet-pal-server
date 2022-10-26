@@ -1,9 +1,11 @@
-from xml.etree.ElementInclude import include
-from django.urls import path
+
+from django.urls import path, include
 from . import views
+from rest_framework import routers
+from user import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('user/', views.user, name='user')
+    path('user/', views.User, name='user')
 ]
 
