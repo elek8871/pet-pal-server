@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'pet_pal_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'petpal',
+        'NAME': 'petpal2',
     }
 }
 
@@ -127,6 +127,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
-]
+AUTH_USER_MODEL = 'main_app.User'
+
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = [
+    #  'http://localhost:3000'
+# ]
